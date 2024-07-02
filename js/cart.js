@@ -4,17 +4,17 @@ function loadCart() {
     CART_CONTAINER.innerHTML = ''; // Limpiar el contenedor antes de recargarlo
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    cart.forEach(producto => {
+    cart.forEach(product => {
         const CARD_ELEMENT = document.createElement("div");
         CARD_ELEMENT.classList.add("cart-card");
 
         CARD_ELEMENT.innerHTML = `
-            <img src="../${producto.img}" alt=${producto.alt} class="cart-card-img">
+            <img src="../${product.img}" alt=${product.alt} class="cart-card-img">
             <div class="cart-card-content">
-                <h2 class="cart-card-title">${producto.title}</h2>
-                <p class="cart-card-description">${producto.description}</p>
-                <div class="cart-card-price">Precio: $${producto.totalPrice}</div>
-                <div class="cart-card-quantity">Cantidad: ${producto.amount}</div>
+                <h2 class="cart-card-title">${product.title}</h2>
+                <p class="cart-card-description">${product.description}</p>
+                <div class="cart-card-price">Precio: $${product.totalPrice}</div>
+                <div class="cart-card-quantity">Cantidad: ${product.amount}</div>
             </div>
         `;
 

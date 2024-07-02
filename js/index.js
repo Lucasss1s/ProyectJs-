@@ -1,15 +1,3 @@
-/* INDEX */
-const NAV = document.querySelector('.header');
-NAV.innerHTML = `
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/products.html">Product</a>
-        <a href="*">Places</a>
-        <a href="*">Register</a>
-        <a href="../pages/cart.html">CART</i></a>
-    </nav>
-`;
-
 const CAROUSEL = document.querySelector('.carousel');
 CAROUSEL.innerHTML = `
         <h2>Welcome to Home</h2>
