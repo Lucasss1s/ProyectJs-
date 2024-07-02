@@ -6,7 +6,7 @@ NAV.innerHTML = `
         <a href="../pages/products.html">Product</a>
         <a href="*">Places</a>
         <a href="*">Register</a>
-        <a href="*"><i class="fi fi-br-shopping-cart-add"></i></a>
+        <a href="../pages/cart.html">CART</i></a>
     </nav>
 `;
 

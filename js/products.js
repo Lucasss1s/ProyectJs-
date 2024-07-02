@@ -118,32 +118,49 @@ PRODUCT_ITEM.forEach((item, index) => {
         selectedProductContainer.innerHTML = null;
         selectedProductContainer.appendChild(selectedProductCard);
 
-            selectedProductCard.querySelector('.minus').addEventListener('click', () => {
+        selectedProductCard.querySelector('.minus').addEventListener('click', () => {
             if (selectedProduct.amount > 1) {
                 selectedProduct.amount--
-                actualizarTarjeta(selectedProduct, selectedProductCard);
+                updateCard(selectedProduct, selectedProductCard);
             }
         });
 
         selectedProductCard.querySelector('.plus').addEventListener('click', () => {
             selectedProduct.amount++
-            actualizarTarjeta(selectedProduct, selectedProductCard);
+            updateCard(selectedProduct, selectedProductCard);
         });
 
         selectedProductCard.querySelector('.close-button').addEventListener('click', () => {
             selectedProductContainer.innerHTML = null;
         });
         
-        
+        selectedProductCard.querySelector('.buy-button').addEventListener('click', () => {
+            addToCart(selectedProduct);
+        });
+
 
     });
 });
 
 
 
-function actualizarTarjeta(selectedProduct, selectedProductCard) {
+function updateCard(selectedProduct, selectedProductCard) {
     selectedProductCard.querySelector('.quantity-indicator').textContent = selectedProduct.amount;
 
     selectedProductCard.querySelector('.product-price').textContent = 'Price $'+(selectedProduct.price * selectedProduct.amount);
 };
 
+// Función para agregar productos al carrito
+function addToCart(selectedProduct) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let productExisting = cart.find(item => item.title === selectedProduct.title);
+
+    if (productExisting) {
+        productExisting.amount += selectedProduct.amount;
+        productExisting.totalPrice = productExisting.amount * selectedProduct.price; 
+    } else {
+        cart.push({...selectedProduct, totalPrice: selectedProduct.amount * selectedProduct.price});
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}

@@ -283,3 +283,44 @@ footer {
     font-size: 1.2em;
     color: #ff9800;
 }
+
+
+
+
+
+/* CART */
+
+.cart-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.cart-card-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-card-title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.cart-card-description {
+    margin: 5px 0;
+}
+
+.cart-card-price,
+.cart-card-quantity {
+    font-weight: bold;
+}
