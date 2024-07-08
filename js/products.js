@@ -76,6 +76,7 @@ function generateCardsProducts(data){
         PRODUCT_ELEMENT.classList.add('product-item');
         PRODUCT_ELEMENT.innerHTML = `
             <img src="${product.img}" alt="${product.alt}">
+            <div class="product-price-overlay">Price: $${product.price}</div>
 `;
     PRODUCTS.appendChild(PRODUCT_ELEMENT);
     })
@@ -137,7 +138,6 @@ PRODUCT_ITEM.forEach((item, index) => {
         selectedProductCard.querySelector('.buy-button').addEventListener('click', () => {
             addToCart(selectedProduct);
         });
-
 
     });
 });
