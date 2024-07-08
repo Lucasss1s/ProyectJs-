@@ -139,6 +139,20 @@ PRODUCT_ITEM.forEach((item, index) => {
             addToCart(selectedProduct);
         });
 
+        let cartConfirmation = document.querySelector(".buy-button");
+        cartConfirmation.addEventListener("click", () =>{
+                Toastify({
+                    text:"ADDED TO CART",
+                    duration: 1000,
+                    position:"right",
+                    gravity: "top",
+                    style: {
+                        background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    }
+                }).showToast();
+
+            })
+
     });
 });
 
@@ -164,3 +178,5 @@ function addToCart(selectedProduct) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
 }
+
+
