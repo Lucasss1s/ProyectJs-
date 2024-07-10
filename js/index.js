@@ -9,13 +9,13 @@ CAROUSEL.innerHTML = `
             </div>
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/carousel.jpg" class="d-block w-100" alt="...">
+                <img src="./img/banner1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="./img/carousel.jpg" class="d-block w-100" alt="...">
+                <img src="./img/banner2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="./img/carousel.jpg" class="d-block w-100" alt="...">
+                <img src="./img/banner3.jpg" class="d-block w-100" alt="...">
             </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -34,19 +34,19 @@ COLLECTIONS.innerHTML = `
     <h2>Collections</h2>
         <div class="collections">
         <div class="collection">
-            <img src="./img/remera.jpg" alt="Colección 1">
-            <h3>Colección 1</h3>
-            <p>Descripción de la colección 1.</p>
+            <img src="./img/1.jpg" alt="Colección 1">
+            <h3>Hoodies</h3>
+            <p>Your ideal destination for premium hoodies that combine comfort with style. Discover our exclusive collections.</p>
         </div>
         <div class="collection">
-            <img src="./img/remera.jpg" alt="Colección 2">
-            <h3>Colección 2</h3>
-            <p>Descripción de la colección 2.</p>
+            <img src="./img/4.png" alt="Colección 2">
+            <h3>T-Shirts</h3>
+            <p>Your ideal destination for premium stylish tees that blend comfort with fashion. Discover our exclusive collections.</p>
         </div>
         <div class="collection">
-            <img src="./img/remera.jpg" alt="Colección 3">
-            <h3>Colección 3</h3>
-            <p>Descripción de la colección 3.</p>
+            <img src="./img/5.jpg" alt="Colección 3">
+            <h3>Jackets</h3>
+            <p>Your ultimate destination for premium jackets that combine comfort with style. Explore our exclusive collections.</p>
         </div>
         </div>
 `;

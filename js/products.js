@@ -104,11 +104,6 @@ PRODUCT_ITEM.forEach((item, index) => {
                 <p>${selectedProduct.description}</p>
                 <p class='product-price'>Price: $${selectedProduct.price}</p>
                 <div class="product-buttons">        
-                    <div class="quantity-controls">
-                        <button class="quantity-button minus">-</button>
-                        <span class="quantity-indicator">${selectedProduct.amount}</span>
-                        <button class="quantity-button plus">+</button>
-                    </div>
                     <button class="buy-button">Add to cart</button>
                     <button class="close-button">Close</button>
                 </div>
@@ -118,18 +113,6 @@ PRODUCT_ITEM.forEach((item, index) => {
       /* limpiamos la card q se genera cuando se selecciona otra (para tener una sola) */
         selectedProductContainer.innerHTML = null;
         selectedProductContainer.appendChild(selectedProductCard);
-
-        selectedProductCard.querySelector('.minus').addEventListener('click', () => {
-            if (selectedProduct.amount > 1) {
-                selectedProduct.amount--
-                updateCard(selectedProduct, selectedProductCard);
-            }
-        });
-
-        selectedProductCard.querySelector('.plus').addEventListener('click', () => {
-            selectedProduct.amount++
-            updateCard(selectedProduct, selectedProductCard);
-        });
 
         selectedProductCard.querySelector('.close-button').addEventListener('click', () => {
             selectedProductContainer.innerHTML = null;
@@ -156,13 +139,6 @@ PRODUCT_ITEM.forEach((item, index) => {
     });
 });
 
-
-
-function updateCard(selectedProduct, selectedProductCard) {
-    selectedProductCard.querySelector('.quantity-indicator').textContent = selectedProduct.amount;
-
-    selectedProductCard.querySelector('.product-price').textContent = 'Price $'+(selectedProduct.price * selectedProduct.amount);
-};
 
 // Función para agregar productos al carrito
 function addToCart(selectedProduct) {
